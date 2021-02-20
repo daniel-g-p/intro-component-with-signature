@@ -1,0 +1,188 @@
+* {
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+}
+
+[default-styles] {
+    all: revert;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("bg-intro-desktop.png");
+    background-size: cover;
+    background-color: hsl(0, 100%, 74%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    width: 45%;
+}
+
+main {
+    width: 50%;
+}
+
+h1 {
+    font: 700 3em/1.25 'Poppins';
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+#specialOffer {
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 8px rgba(62, 60, 73, 0.25);
+    margin-bottom: 1.5rem;
+}
+
+#specialOffer span {
+    font-weight: 700;
+}
+
+form {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px rgba(62, 60, 73, 0.25);
+}
+
+input {
+    color: hsl(249, 10%, 26%);
+    border: 1px solid hsl(249, 10%, 75%);
+    border-radius: 4px;
+    font-weight: 700;
+    width: 100%;
+    padding: 1em 4em 1em 1.5em;
+    margin-bottom: 2rem;
+    transition: border-color 0.25s ease;
+}
+
+input::placeholder {
+    color: hsl(249, 10%, 50%);
+}
+
+input:focus {
+    border-color: hsl(249, 10%, 26%);
+    transition: border-color 0.25s ease;
+}
+
+button {
+    background-color: hsl(154, 59%, 51%);
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 100%;
+    box-shadow: 0 4px hsl(154, 59%, 45%);
+    padding: 1em 1.5em;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.25s ease;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: hsl(154, 59%, 60%);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+form p {
+    text-align: center;
+    font-size: 0.75em;
+    color: hsl(246, 25%, 77%);
+}
+
+#termsOfService {
+    display: inline-block;
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+#termsOfService:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 960px) {
+    body {
+        flex-direction: column;
+        width: 85%;
+        margin: 3rem 0;
+        height: auto;
+    }
+    header,
+    main {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    main {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    opacity: 0;
+    color: hsl(0, 100%, 74%);
+    border-color: hsl(0, 100%, 74%);
+}
+
+.errorInput {
+    border-color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+    transition-property: border-color, color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+
+.errorMessage {
+    opacity: 1;
+    font-style: italic;
+    color: hsl(0, 100%, 74%);
+    position: absolute;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 3.75rem;
+    transition: opacity 0.25s ease;
+}
+
+.errorIcon {
+    opacity: 1;
+    color: hsl(0, 100%, 74%);
+    position: absolute;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 0.75rem;
+    margin-right: 1rem;
+    transition: opacity 0.25s ease;
+}
